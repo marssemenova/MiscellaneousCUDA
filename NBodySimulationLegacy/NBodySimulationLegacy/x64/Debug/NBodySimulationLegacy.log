@@ -1,0 +1,20 @@
+﻿  Compiling CUDA source file main.cu...
+  
+  C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\NBodySimulationLegacy>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.21.27702\bin\HostX86\x64" -x cu  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Fdx64\Debug\vc142.pdb /FS /Zi /RTC1 /MDd " -o x64\Debug\main.cu.obj "C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\NBodySimulationLegacy\main.cu" 
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\NBodySimulationLegacy\util/cpu_anim.h(61): warning : conversion from a string literal to "char *" is deprecated
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\NBodySimulationLegacy\util/cpu_anim.h(61): warning : conversion from a string literal to "char *" is deprecated
+  
+  main.cu
+  NBodyInit.c
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\NBodySimulationLegacy\NBodyInit.h(213,23): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\NBodySimulationLegacy\NBodyInit.h(205,1): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\NBodySimulationLegacy\NBodyInit.h(206,1): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\NBodySimulationLegacy\NBodyInit.h(207,1): warning C4305:  'initializing': truncation from 'double' to 'float'
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\NBodySimulationLegacy\NBodyInit.c(317,21): warning C4477:  'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'time_t'
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\NBodySimulationLegacy\NBodyInit.c(317,21): message :  consider using '%lld' in the format string
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\NBodySimulationLegacy\NBodyInit.c(317,21): message :  consider using '%Id' in the format string
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\NBodySimulationLegacy\NBodyInit.c(317,21): message :  consider using '%I64d' in the format string
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\NBodySimulationLegacy\NBodyInit.c(318,15): warning C4244:  'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+     Creating library C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\x64\Debug\NBodySimulationLegacy.lib and object C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\x64\Debug\NBodySimulationLegacy.exp
+  NBodySimulationLegacy.vcxproj -> C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulationLegacy\x64\Debug\NBodySimulationLegacy.exe
