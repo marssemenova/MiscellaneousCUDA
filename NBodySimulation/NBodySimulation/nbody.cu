@@ -8,13 +8,17 @@
 
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
+#include <cuda.h>
+#include <device_functions.h>
+#include <cuda_runtime_api.h>
 #include "util/book.h"
 #include "util/cpu_anim.h"
 #include "NBodyInit.h"
+#include <stdio.h>
 
  // params
-#define N 8
-#define p 8
+#define N 64
+#define p 16
 #define EPS2 pow(1e-20, 2)
 
 /**
@@ -55,7 +59,7 @@ __device__ float3 bodyBodyInteraction(float4 bi, float4 bj, float3 ai) {
  */
 __device__ float3 tile_calculation(float4 myPosition, float3 accel) {
   int i;
-  extern __shared__ float4[] shPosition;
+  extern __shared__ float4 shPosition[];
   for (i = 0; i < blockDim.x; i++) {
     accel = bodyBodyInteraction(myPosition, shPosition[i], accel);
   }
@@ -71,7 +75,7 @@ __device__ float3 tile_calculation(float4 myPosition, float3 accel) {
  * @param devA - Pointer to global device memory for the acceleration of all bodies.
  */
 __global__ void calculate_forces(void *devX, void *devA) {
-  extern __shared__ float4[] shPosition;
+  extern __shared__ float4 shPosition[];
   float4 *globalX = (float4 *)devX;
   float4 *globalA = (float4 *)devA;
   float4 myPosition;
@@ -92,17 +96,51 @@ __global__ void calculate_forces(void *devX, void *devA) {
 }
 
 int main(void) {
-	int err;
-    double *r = NULL, *v = NULL, *a = NULL, *m = NULL;
+    float4* dev_pos;
+    float4* dev_a;
+    HANDLE_ERROR(cudaMalloc((void**)&dev_pos, N));
+    HANDLE_ERROR(cudaMalloc((void**)&dev_a, N));
+
+    int err;
+    double* r = NULL, *v = NULL, *a = NULL, *m = NULL;
     err = allocData3N_NB(N, &r);
     err |= allocData3N_NB(N, &v);
     err |= allocData3N_NB(N, &a);
     err |= allocDataN_NB(N, &m);
     if (err) {
-        fprintf(stderr, "Could not alloc data for N=%ld\n", N);
+        printf("Could not alloc data for N=%ld, err:%d\n", N, err);
         exit(0);
     }
 
     err = initData_NB(N, -1, r, v, a, m);
-	fprintf(stderr, "%d", err);
+    if (!err) {
+        printf("Could not initialize data for N=%ld, err:%d\n", N, err);
+        exit(0);
+    }
+
+    float4* temp_pos = (float4*)malloc(N* sizeof(float4));
+    float4* temp_a = (float4*)malloc(N * sizeof(float4));
+
+    for (int x = 0; x < N; x++) {
+        temp_pos[x] = make_float4(r[3*x], r[3*x + 1], r[3*x + 2], m[N]);
+        temp_a[x] = make_float4(a[3 * x], a[3 * x + 1], a[3 * x + 2], 0.0);
+    }
+
+    for (int x = 0; x < N; x++) {
+        printf("%f %f %f\n", temp_a[x].x, temp_a[x].y, temp_a[x].z);
+    }
+
+    printf("\n\n\n");
+
+
+    HANDLE_ERROR(cudaMemcpy(dev_pos, temp_pos, N, cudaMemcpyHostToDevice));
+    HANDLE_ERROR(cudaMemcpy(dev_a, temp_a, N, cudaMemcpyHostToDevice));
+
+    calculate_forces <<<(N / p), p >>>(dev_pos, dev_a);
+
+    float4* res_a = (float4*)malloc(N * sizeof(float4));
+    HANDLE_ERROR(cudaMemcpy(res_a, dev_a, N, cudaMemcpyDeviceToHost));
+    for (int x = 0; x < N; x++) {
+        printf("%f %f %f\n", res_a[x].x, res_a[x].y, res_a[x].z);
+    }
 }
