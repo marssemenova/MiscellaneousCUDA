@@ -12,7 +12,7 @@
 #include <device_functions.h>
 #include <cuda_runtime_api.h>
 #include "util/book.h"
-#include "util/cpu_anim.h"
+#include "util/cpu_anim_points.h"
 #include "NBodyInit.h"
 #include <stdio.h>
 
@@ -21,6 +21,11 @@
 #define p 16
 #define EPS2 pow(1e-20, 2)
 
+struct DataBlock {
+    float4* dev_pos;
+    float4* dev_a;
+    CPUAnimPoints* ptsAnim;
+};
 /**
  * Compute the interaction of a body with another body to
  * calculate the updated acceleration of the first body.
@@ -98,12 +103,30 @@ __global__ void calculate_forces(void* devX, void* devA) {
     globalA[gtid] = acc4;
 }
 
-int main(void) {
-    float4* dev_pos;
-    float4* dev_a;
-    HANDLE_ERROR(cudaMalloc((void**)&dev_pos, N * sizeof(float4)));
-    HANDLE_ERROR(cudaMalloc((void**)&dev_a, N * sizeof(float4)));
+/**
+ * Animation helper method from Cuda by Example' support files: https://github.com/tpoisot/CUDA-training/tree/master/utils/cuda_by_example/common.
+ */
+void anim_gpu(DataBlock* d, int ticks) {
+    CPUAnimPoints* ptsAnimator = d->ptsAnim;
+    calculate_forces <<<(N / p), p >>> (d->dev_pos, d->dev_a);
 
+    float4* res_a = (float4*)malloc(N * sizeof(float4));
+    HANDLE_ERROR(cudaMemcpy(res_a, d->dev_a, N * sizeof(float4), cudaMemcpyDeviceToHost));
+    for (int x = 0; x < N; x++) {
+        printf("%f %f %f\n", res_a[x].x, res_a[x].y, res_a[x].z);
+    }
+}
+
+/**
+ * Animation helper method from Cuda by Example' support files: https://github.com/tpoisot/CUDA-training/tree/master/utils/cuda_by_example/common.
+ */
+void anim_exit(DataBlock* d) {
+    cudaFree(d->dev_pos);
+    cudaFree(d->dev_a);
+}
+
+int main(void) {
+    // gen data
     int err;
     double* r = NULL, *v = NULL, *a = NULL, *m = NULL;
     err = allocData3N_NB(N, &r);
@@ -121,6 +144,7 @@ int main(void) {
         exit(0);
     }
 
+    // copy data
     float4* temp_pos = (float4*)malloc(N* sizeof(float4));
     float4* temp_a = (float4*)malloc(N * sizeof(float4));
 
@@ -129,14 +153,20 @@ int main(void) {
         temp_a[x] = make_float4(a[3 * x], a[3 * x + 1], a[3 * x + 2], 0.0);
     }
 
-    HANDLE_ERROR(cudaMemcpy(dev_pos, temp_pos, N * sizeof(float4), cudaMemcpyHostToDevice));
-    HANDLE_ERROR(cudaMemcpy(dev_a, temp_a, N * sizeof(float4), cudaMemcpyHostToDevice));
+    // allocate data
+    DataBlock data;
+    double range = computeDomainSize_NB(N, r);
+    CPUAnimPoints ptsAnimator(N, range, temp_pos, &data);
+    data.ptsAnim = &ptsAnimator;
+    HANDLE_ERROR(cudaMalloc((void**)&data.dev_pos, N * sizeof(float4)));
+    HANDLE_ERROR(cudaMalloc((void**)&data.dev_a, N * sizeof(float4)));
 
-    calculate_forces <<<(N / p), p >>>(dev_pos, dev_a);
+    // copy data
+    HANDLE_ERROR(cudaMemcpy(data.dev_pos, temp_pos, N * sizeof(float4), cudaMemcpyHostToDevice));
+    HANDLE_ERROR(cudaMemcpy(data.dev_a, temp_a, N * sizeof(float4), cudaMemcpyHostToDevice));
 
-    float4* res_a = (float4*)malloc(N * sizeof(float4));
-    HANDLE_ERROR(cudaMemcpy(res_a, dev_a, N * sizeof(float4), cudaMemcpyDeviceToHost));
-    for (int x = 0; x < N; x++) {
-        printf("%f %f %f\n", res_a[x].x, res_a[x].y, res_a[x].z);
-    }
+    free(temp_pos);
+    free(temp_a);
+
+    ptsAnimator.anim_and_exit((void (*)(void*, int)) anim_gpu, (void (*)(void*)) anim_exit);
 }

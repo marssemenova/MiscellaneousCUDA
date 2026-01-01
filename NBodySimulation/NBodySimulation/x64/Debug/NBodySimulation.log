@@ -1,19 +1,86 @@
 ﻿  Compiling CUDA source file nbody.cu...
   
   C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\bin\nvcc.exe" -gencode=arch=compute_75,code=\"sm_75,compute_75\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include"  -G   --keep-dir x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart hybrid  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o "C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\x64\Debug\nbody.cu.obj" "C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\nbody.cu" 
-C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util/cpu_anim.h(61): warning #2464-D: conversion from a string literal to "char *" is deprecated
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util/cpu_anim_points.h(58): warning #2464-D: conversion from a string literal to "char *" is deprecated
             char* dummy = "";
                           ^
   
   Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
   
   device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead.
-C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util/cpu_anim.h(61): warning #2464-D: conversion from a string literal to "char *" is deprecated
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util/cpu_anim_points.h(58): warning #2464-D: conversion from a string literal to "char *" is deprecated
             char* dummy = "";
                           ^
   
   Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
   
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\nbody.cu(110): warning #177-D: variable "ptsAnimator" was declared but never referenced
+        CPUAnimPoints* ptsAnimator = d->ptsAnim;
+                       ^
+  
   nbody.cu
-  tmpxft_00004b24_00000000-7_nbody.cudafe1.cpp
+  tmpxft_00001e24_00000000-7_nbody.cudafe1.cpp
+  NBodyInit.c
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(213,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(205,31): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(205,51): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(205,65): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(205,77): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(205,91): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(206,31): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(206,51): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(206,64): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(206,76): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(206,90): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(207,31): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(207,52): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(207,66): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(207,79): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(207,94): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(207,107): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'NBodyInit.c')
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.c(317,21): warning C4477: 'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'time_t'
+      C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.c(317,21):
+      consider using '%lld' in the format string
+      C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.c(317,21):
+      consider using '%Id' in the format string
+      C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.c(317,21):
+      consider using '%I64d' in the format string
+  
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.c(318,11): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+     Creating library C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\x64\Debug\NBodySimulation.lib and object C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\x64\Debug\NBodySimulation.exp
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
   NBodySimulation.vcxproj -> C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\x64\Debug\NBodySimulation.exe

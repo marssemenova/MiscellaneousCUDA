@@ -304,7 +304,7 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\vector_types.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyHelpers.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\book.h
-C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\cpu_anim.h
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\cpu_anim_points.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\GL\glext.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\GL\glut.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\gl_helper.h

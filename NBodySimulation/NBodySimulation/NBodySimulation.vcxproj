@@ -90,12 +90,10 @@
     <ClInclude Include="NBodyHelpers.h" />
     <ClInclude Include="NBodyInit.h" />
     <ClInclude Include="util\book.h" />
-    <ClInclude Include="util\cpu_anim.h" />
-    <ClInclude Include="util\cpu_bitmap.h" />
+    <ClInclude Include="util\cpu_anim_points.h" />
     <ClInclude Include="util\GL\glext.h" />
     <ClInclude Include="util\GL\glut.h" />
     <ClInclude Include="util\gl_helper.h" />
-    <ClInclude Include="util\gpu_anim.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\glut32.lib" />
