@@ -322,6 +322,7 @@ int initData_NB(long n, time_t seed, double* r, double* v, double* a, double* m)
 	double virialScale = 16.0 / (_PI * 3.0); //for plummer model
 
     int error = _initMassEqual(n, m, M);
+
     if (error) {
         fprintf(stderr, "NBODY: Could not init masses.\n");
         exit(INIT_ERROR);

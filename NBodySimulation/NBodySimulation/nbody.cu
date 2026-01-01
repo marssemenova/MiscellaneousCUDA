@@ -36,6 +36,9 @@ __device__ float3 bodyBodyInteraction(float4 bi, float4 bj, float3 ai) {
   r.x = bj.x - bi.x;
   r.y = bj.y - bi.y;
   r.z = bj.z - bi.z;
+  if (r.x == 0 && r.y == 0 && r.z == 0) { // TODO: is this correct? I had to add this to avoid division by inf but this isn't in the ch 31 code :')
+      return ai;
+  }
   // distSqr = dot(r_ij, r_ij) + EPS^2 
   float distSqr = r.x * r.x + r.y * r.y + r.z * r.z + EPS2;
   // invDistCube =1/distSqr^(3/2) 
@@ -74,32 +77,32 @@ __device__ float3 tile_calculation(float4 myPosition, float3 accel) {
  * @param devX - Pointer to global device memory for the positions of all bodies.
  * @param devA - Pointer to global device memory for the acceleration of all bodies.
  */
-__global__ void calculate_forces(void *devX, void *devA) {
-  extern __shared__ float4 shPosition[];
-  float4 *globalX = (float4 *)devX;
-  float4 *globalA = (float4 *)devA;
-  float4 myPosition;
-  int i, tile;
-  float3 acc = {0.0f, 0.0f, 0.0f};
-  int gtid = blockIdx.x * blockDim.x + threadIdx.x;
-  myPosition = globalX[gtid];
-  for (i = 0, tile = 0; i < N; i += p, tile++) {
-    int idx = tile * blockDim.x + threadIdx.x;
-    shPosition[threadIdx.x] = globalX[idx];
-    __syncthreads();
-    acc = tile_calculation(myPosition, acc);
-    __syncthreads();
-  }
-  // Save the result in global memory for the integration step.
-   float4 acc4 = {acc.x, acc.y, acc.z, 0.0f};
-   globalA[gtid] = acc4;
+__global__ void calculate_forces(void* devX, void* devA) {
+    extern __shared__ float4 shPosition[];
+    float4* globalX = (float4*)devX;
+    float4* globalA = (float4*)devA;
+    float4 myPosition;
+    int i, tile;
+    float3 acc = { 0.0f, 0.0f, 0.0f };
+    int gtid = blockIdx.x * blockDim.x + threadIdx.x;
+    myPosition = globalX[gtid];
+    for (i = 0, tile = 0; i < N; i += p, tile++) {
+        int idx = tile * blockDim.x + threadIdx.x;
+        shPosition[threadIdx.x] = globalX[idx];
+        __syncthreads();
+        acc = tile_calculation(myPosition, acc);
+        __syncthreads();
+    }
+    // Save the result in global memory for the integration step.
+    float4 acc4 = { acc.x, acc.y, acc.z, 0.0f };
+    globalA[gtid] = acc4;
 }
 
 int main(void) {
     float4* dev_pos;
     float4* dev_a;
-    HANDLE_ERROR(cudaMalloc((void**)&dev_pos, N));
-    HANDLE_ERROR(cudaMalloc((void**)&dev_a, N));
+    HANDLE_ERROR(cudaMalloc((void**)&dev_pos, N * sizeof(float4)));
+    HANDLE_ERROR(cudaMalloc((void**)&dev_a, N * sizeof(float4)));
 
     int err;
     double* r = NULL, *v = NULL, *a = NULL, *m = NULL;
@@ -122,24 +125,17 @@ int main(void) {
     float4* temp_a = (float4*)malloc(N * sizeof(float4));
 
     for (int x = 0; x < N; x++) {
-        temp_pos[x] = make_float4(r[3*x], r[3*x + 1], r[3*x + 2], m[N]);
+        temp_pos[x] = make_float4(r[3*x], r[3*x + 1], r[3*x + 2], m[x]);
         temp_a[x] = make_float4(a[3 * x], a[3 * x + 1], a[3 * x + 2], 0.0);
     }
 
-    for (int x = 0; x < N; x++) {
-        printf("%f %f %f\n", temp_a[x].x, temp_a[x].y, temp_a[x].z);
-    }
-
-    printf("\n\n\n");
-
-
-    HANDLE_ERROR(cudaMemcpy(dev_pos, temp_pos, N, cudaMemcpyHostToDevice));
-    HANDLE_ERROR(cudaMemcpy(dev_a, temp_a, N, cudaMemcpyHostToDevice));
+    HANDLE_ERROR(cudaMemcpy(dev_pos, temp_pos, N * sizeof(float4), cudaMemcpyHostToDevice));
+    HANDLE_ERROR(cudaMemcpy(dev_a, temp_a, N * sizeof(float4), cudaMemcpyHostToDevice));
 
     calculate_forces <<<(N / p), p >>>(dev_pos, dev_a);
 
     float4* res_a = (float4*)malloc(N * sizeof(float4));
-    HANDLE_ERROR(cudaMemcpy(res_a, dev_a, N, cudaMemcpyDeviceToHost));
+    HANDLE_ERROR(cudaMemcpy(res_a, dev_a, N * sizeof(float4), cudaMemcpyDeviceToHost));
     for (int x = 0; x < N; x++) {
         printf("%f %f %f\n", res_a[x].x, res_a[x].y, res_a[x].z);
     }
