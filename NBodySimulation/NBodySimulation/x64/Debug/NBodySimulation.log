@@ -1,14 +1,14 @@
 ﻿  Compiling CUDA source file main.cu...
   
   C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\bin\nvcc.exe" -gencode=arch=compute_75,code=\"sm_75,compute_75\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include"  -G   --keep-dir x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart hybrid  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o "C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\x64\Debug\main.cu.obj" "C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\main.cu" 
-C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util/cpu_anim_points.h(85): warning #2464-D: conversion from a string literal to "char *" is deprecated
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util/cpu_anim_points.h(72): warning #2464-D: conversion from a string literal to "char *" is deprecated
             char* dummy = "";
                           ^
   
   Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
   
   device_functions.h is an internal header file and must not be used directly.  This file will be removed in a future CUDA release.  Please use cuda_runtime_api.h or cuda_runtime.h instead.
-C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util/cpu_anim_points.h(85): warning #2464-D: conversion from a string literal to "char *" is deprecated
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util/cpu_anim_points.h(72): warning #2464-D: conversion from a string literal to "char *" is deprecated
             char* dummy = "";
                           ^
   
@@ -243,11 +243,9 @@ C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\
               instantiation of "glm::vec<4, T, Q> glm::operator*(const glm::vec<4, T, Q> &, T) [with T=float, Q=glm::highp]" at line 75 of C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail/func_packing.inl
   
   main.cu
-  tmpxft_000036b4_00000000-7_main.cudafe1.cpp
+  tmpxft_00001c68_00000000-7_main.cudafe1.cpp
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(357): warning C4477: 'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'time_t'
   C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(357): note: consider using '%lld' in the format string
   C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(357): note: consider using '%Id' in the format string
   C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h(357): note: consider using '%I64d' in the format string
-     Creating library C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\x64\Debug\NBodySimulation.lib and object C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\x64\Debug\NBodySimulation.exp
-LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
   NBodySimulation.vcxproj -> C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\x64\Debug\NBodySimulation.exe

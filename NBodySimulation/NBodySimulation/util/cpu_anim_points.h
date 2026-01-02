@@ -25,8 +25,6 @@
 
 struct CPUAnimPoints {
     float *points;
-    float *a; // TODO: temp
-    int init; // TODO: temp
     void* dataBlock;
     double range;
     void (*fAnim)(void*,int);
@@ -47,8 +45,6 @@ struct CPUAnimPoints {
         dataBlock = d;
         points = (float*)malloc(n * sizeof(float) * 3);
         copyPoints(points, initPos);
-        a = (float*)malloc(n * sizeof(float) * 3); // TODO: temp
-        init = 0; // TODO: temp
     }
 
     /**
@@ -62,15 +58,6 @@ struct CPUAnimPoints {
             points[3 * x] = pos[x].x;
             points[3 * x + 1] = pos[x].y;
             points[3 * x + 2] = pos[x].z;
-        }
-    }
-
-    void copyA(float* acc, float4* acceleration, int* inited) { // TODO: temp
-        for (int x = 0; x < n; x++) {
-            acc[3 * x] = acceleration[x].x;
-            acc[3 * x + 1] = acceleration[x].y;
-            acc[3 * x + 2] = acceleration[x].z;
-            *inited = 1;
         }
     }
 
@@ -126,14 +113,10 @@ struct CPUAnimPoints {
 
         // draw bodies
         glPointSize(5.0f);
+        glColor4f(1.0, 0.0, 0.0, 1.0);
         glBegin(GL_POINTS);
             for (int x = 0; x < ptsAnimator->n; x++) {
-                glColor4f(1.0, 0.0, 0.0, 1.0);
                 glVertex3f(ptsAnimator->points[3 * x], ptsAnimator->points[3 * x + 1], ptsAnimator->points[3 * x + 2]);
-                if (ptsAnimator->init) {
-                    glColor4f(0.0, 1.0, 0.0, 1.0);
-                    glVertex3f(ptsAnimator->points[3 * x] + ptsAnimator->a[3 * x], ptsAnimator->points[3 * x + 1] + ptsAnimator->a[3 * x + 1], ptsAnimator->points[3 * x + 2] + ptsAnimator->a[3 * x + 2]);
-                }
             }
             
         glEnd();

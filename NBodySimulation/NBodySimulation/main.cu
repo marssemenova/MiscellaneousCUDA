@@ -19,7 +19,7 @@
  // params
 #define N 64
 #define p 16 // TODO: how to determine?
-#define EPS2 pow(1e-20, 2)
+#define EPS2 1e-5
 
 struct DataBlock {
     float4* dev_pos;
@@ -41,9 +41,6 @@ __device__ float3 bodyBodyInteraction(float4 bi, float4 bj, float3 ai) {
   r.x = bj.x - bi.x;
   r.y = bj.y - bi.y;
   r.z = bj.z - bi.z;
-  if (r.x == 0 && r.y == 0 && r.z == 0) { // TODO: is this correct? I had to add this to avoid division by inf but this isn't in the ch 31 code :')
-      return ai;
-  }
   // distSqr = dot(r_ij, r_ij) + EPS^2
   float distSqr = r.x * r.x + r.y * r.y + r.z * r.z + EPS2;
   // invDistCube =1/distSqr^(3/2)
@@ -112,12 +109,27 @@ void anim_gpu(DataBlock* d, int ticks) {
     // call kernel
     calculate_forces <<<(N / p), p >>> (d->dev_pos, d->dev_a);
 
-    // retrieve resultes
+    // retrieve results
     float4* res_a = (float4*)malloc(N * sizeof(float4));
+    float4* zero_a = (float4*)malloc(N * sizeof(float4));
     HANDLE_ERROR(cudaMemcpy(res_a, d->dev_a, N * sizeof(float4), cudaMemcpyDeviceToHost));
+    float4* res_pos = (float4*)malloc(N * sizeof(float4));
+    HANDLE_ERROR(cudaMemcpy(res_pos, d->dev_pos, N * sizeof(float4), cudaMemcpyDeviceToHost));
 
-    // copy data to animator (TODO: overwrite points instead, temp sol to show results)
-    ptsAnimator->copyA(ptsAnimator->a, res_a, &(ptsAnimator->init));
+    // calculate new pos
+    for (int x = 0; x < N; x++) {
+        res_pos[x].x += res_a[x].x;
+        res_pos[x].y += res_a[x].y;
+        res_pos[x].z += res_a[x].z;
+        zero_a[x] = make_float4(0.0, 0.0, 0.0, 0.0);
+    }
+
+    // copy updated points to animator
+    ptsAnimator->copyPoints(ptsAnimator->points, res_pos);
+    
+    // copy updated data to device
+    HANDLE_ERROR(cudaMemcpy(d->dev_a, zero_a, N * sizeof(float4), cudaMemcpyHostToDevice));
+    HANDLE_ERROR(cudaMemcpy(d->dev_pos, res_pos, N * sizeof(float4), cudaMemcpyHostToDevice));
 }
 
 /**
