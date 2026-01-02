@@ -13,6 +13,8 @@
 #include <string.h>
 
 #include "gl_helper.h"
+#include "../include/glm/glm.hpp"
+#include "../include/glad/include/glad/glad.h"
 
 GLuint LoadShaders(const char * vertex_file_path,const char * fragment_file_path){
 

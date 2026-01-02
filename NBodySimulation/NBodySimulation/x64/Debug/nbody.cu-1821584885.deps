@@ -314,6 +314,7 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\texture_types.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\vector_functions.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\vector_functions.hpp
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\vector_types.h
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glad\include\glad\glad.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\common.hpp
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\compute_common.hpp
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\compute_vector_decl.hpp
@@ -460,11 +461,9 @@ C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\vec3.hpp
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\vec4.hpp
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\vector_relational.hpp
-C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\book.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\cpu_anim_points.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\GL\glext.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\GL\glut.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\gl_helper.h
-C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\NBodyHelpers.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\shader.h
