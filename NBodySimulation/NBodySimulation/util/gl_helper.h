@@ -28,6 +28,7 @@
 #define GLUT_NO_LIB_PRAGMA
 #pragma comment (lib, "opengl32.lib")  /* link with Microsoft OpenGL lib */
 #pragma comment (lib, "glut64.lib")    /* link with Win64 GLUT lib */
+#pragma comment(lib, "glu32.lib")
 #endif //_WIN64
 
 

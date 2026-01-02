@@ -77,10 +77,7 @@
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CudaCompile Include="nbody.cu" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="NBodyInit.c" />
+    <CudaCompile Include="main.cu" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\glad\include\glad\glad.h" />
@@ -92,8 +89,14 @@
     <ClInclude Include="util\GL\glext.h" />
     <ClInclude Include="util\GL\glut.h" />
     <ClInclude Include="util\gl_helper.h" />
-    <ClInclude Include="util\Point.h" />
-    <ClInclude Include="util\shader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\glut32.lib" />
+    <Library Include="lib\glut64.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="glut32.dll" />
+    <None Include="glut64.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
