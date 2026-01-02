@@ -36,6 +36,7 @@ C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\winsmcrd.h
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\wnnc.h
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\wtypes.h
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\wtypesbase.h
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\ucrt\assert.h
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\ucrt\corecrt.h
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\ucrt\corecrt_malloc.h
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\ucrt\corecrt_math.h
@@ -172,8 +173,10 @@ C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winsvc.h
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winuser.h
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winver.h
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\wow64apiset.h
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\algorithm
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\ammintrin.h
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\atomic
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\cassert
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\cctype
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\cerrno
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\cfloat
@@ -193,6 +196,8 @@ C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.3
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\emmintrin.h
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\exception
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\excpt.h
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\fstream
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\functional
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\immintrin.h
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\initializer_list
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\intrin.h
@@ -214,12 +219,15 @@ C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.3
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\sal.h
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\setjmp.h
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\smmintrin.h
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\sstream
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\stdarg.h
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\stdexcept
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\stdint.h
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\streambuf
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\string
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\system_error
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\tmmintrin.h
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\tuple
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\typeinfo
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\type_traits
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\use_ansi.h
@@ -231,6 +239,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.3
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\vcruntime_new_debug.h
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\vcruntime_string.h
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\vcruntime_typeinfo.h
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\vector
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\wmmintrin.h
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xatomic.h
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\xcall_once.h
@@ -251,7 +260,11 @@ C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.3
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\yvals.h
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\yvals_core.h
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\zmmintrin.h
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\__msvc_bit_utils.hpp
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\__msvc_filebuf.hpp
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\__msvc_heap_algorithms.hpp
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\__msvc_iter_core.hpp
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\__msvc_minmax.hpp
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\__msvc_sanitizer_annotate_container.hpp
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.44.35207\include\__msvc_string_view.hpp
@@ -301,10 +314,157 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\texture_types.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\vector_functions.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\vector_functions.hpp
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\vector_types.h
-C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyHelpers.h
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\common.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\compute_common.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\compute_vector_decl.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\compute_vector_relational.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\func_common.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\func_exponential.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\func_geometric.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\func_integer.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\func_matrix.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\func_packing.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\func_trigonometric.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\func_vector_relational.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\qualifier.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\setup.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_half.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_half.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat2x2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat2x2.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat2x3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat2x3.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat2x4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat2x4.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat3x2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat3x2.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat3x3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat3x3.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat3x4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat3x4.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat4x2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat4x2.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat4x3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat4x3.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat4x4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_mat4x4.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_vec1.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_vec1.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_vec2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_vec2.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_vec3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_vec3.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_vec4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\type_vec4.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\_fixes.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\detail\_vectorize.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\exponential.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_clip_space.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_clip_space.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double2x2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double2x2_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double2x3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double2x3_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double2x4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double2x4_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double3x2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double3x2_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double3x3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double3x3_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double3x4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double3x4_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double4x2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double4x2_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double4x3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double4x3_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double4x4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_double4x4_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float2x2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float2x2_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float2x3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float2x3_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float2x4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float2x4_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float3x2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float3x2_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float3x3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float3x3_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float3x4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float3x4_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float4x2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float4x2_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float4x3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float4x3_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float4x4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_float4x4_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_projection.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_projection.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_transform.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\matrix_transform.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\scalar_constants.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\scalar_constants.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\scalar_int_sized.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\scalar_uint_sized.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_bool2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_bool2_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_bool3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_bool3_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_bool4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_bool4_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_double2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_double2_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_double3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_double3_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_double4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_double4_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_float2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_float2_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_float3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_float3_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_float4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_float4_precision.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_int2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_int2_sized.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_int3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_int3_sized.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_int4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_int4_sized.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_uint2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_uint2_sized.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_uint3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_uint3_sized.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_uint4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\ext\vector_uint4_sized.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\fwd.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\geometric.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\glm.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\gtc\constants.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\gtc\constants.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\gtc\matrix_transform.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\gtc\matrix_transform.inl
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\integer.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\mat2x2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\mat2x3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\mat2x4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\mat3x2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\mat3x3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\mat3x4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\mat4x2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\mat4x3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\mat4x4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\matrix.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\packing.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\simd\platform.h
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\trigonometric.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\vec2.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\vec3.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\vec4.hpp
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\include\glm\vector_relational.hpp
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\NBodyInit.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\book.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\cpu_anim_points.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\GL\glext.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\GL\glut.h
 C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\gl_helper.h
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\NBodyHelpers.h
+C:\Users\marss\Documents\me files\git\honours\MiscellaneousCUDA\NBodySimulation\NBodySimulation\util\shader.h

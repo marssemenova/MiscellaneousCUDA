@@ -7,7 +7,7 @@
 #include <math.h>
 #include <stdio.h>
 
-#include "NBodyHelpers.h"
+#include "util/NBodyHelpers.h"
 
 #ifdef __cplusplus
 extern "C" {

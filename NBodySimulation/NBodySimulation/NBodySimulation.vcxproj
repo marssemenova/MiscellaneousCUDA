@@ -87,6 +87,7 @@
     <ClCompile Include="NBodyInit.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\glm\glm.hpp" />
     <ClInclude Include="NBodyHelpers.h" />
     <ClInclude Include="NBodyInit.h" />
     <ClInclude Include="util\book.h" />
@@ -94,6 +95,8 @@
     <ClInclude Include="util\GL\glext.h" />
     <ClInclude Include="util\GL\glut.h" />
     <ClInclude Include="util\gl_helper.h" />
+    <ClInclude Include="util\Point.h" />
+    <ClInclude Include="util\shader.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\glut32.lib" />

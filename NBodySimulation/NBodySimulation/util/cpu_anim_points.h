@@ -19,9 +19,10 @@
 
 #include "gl_helper.h"
 #include "vector_types.h"
-
+#include "include/glm/glm.hpp"
+#include "include/glm/gtc/matrix_transform.hpp"
 #include <iostream>
-
+#include "shader.h"
 
 struct CPUAnimPoints {
     float *points;
@@ -30,6 +31,8 @@ struct CPUAnimPoints {
     void (*fAnim)(void*,int);
     void (*animExit)(void*);
     int n;
+    glm::mat4 Projection;
+    glm::mat4 V;
 
     CPUAnimPoints( int num, double r, float4* initPos, void* d = NULL) {
         n = num;
@@ -56,6 +59,9 @@ struct CPUAnimPoints {
         // passing zero arguments to glutInit()
         int c=1;
         char* dummy = "";
+        Projection = glm::perspective(glm::radians(45.0f), 1280.0f / 720.0f, 0.001f, 1000.0f);
+        glm::vec3 eye = { (*pointsAnimator)->range, (*pointsAnimator)->range, (*pointsAnimator)->range };
+        glm::mat4 V = glm::lookAt(eye, {0.0, 0.0, 0.0}, {0.0, 1.0, 0.0});
         glutInit( &c, &dummy );
         glutInitDisplayMode( GLUT_DOUBLE | GLUT_RGBA );
         glutInitWindowSize( 1280, 720 );
